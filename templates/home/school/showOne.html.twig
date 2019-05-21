@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ school.name }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>L{{ school.name }} School</h1>
+        <p>{{ school.adress }}</p>
+        <p>{{ school.city }}</p>
+        <p>{{ school.capacity }}</p>
+    </div>
+{% endblock %}

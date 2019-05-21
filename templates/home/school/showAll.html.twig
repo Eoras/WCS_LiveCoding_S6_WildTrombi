@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show All Schools{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>All Schools</h1>
+        {% for school in schools %}
+            {{ loop.first ? "<ul>" }}
+            <li><a href="{{ path('school_showOne', {'id': school.id }) }}">{{ school.name }}</a></li>
+            {{ loop.last ? "</ul>" }}
+        {% endfor %}
+    </div>
+{% endblock %}
